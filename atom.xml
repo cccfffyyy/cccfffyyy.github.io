@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>花花的碎片生活</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-05-16T09:49:29.935Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>cuify</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019.05.16 ☀️</title>
+    <link href="http://yoursite.com/2019/05/16/2019.05.16%20%E2%98%80%EF%B8%8F/"/>
+    <id>http://yoursite.com/2019/05/16/2019.05.16 ☀️/</id>
+    <published>2019-05-16T08:34:16.000Z</published>
+    <updated>2019-05-16T09:49:29.935Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="❓一些以前写的想法"><a href="#❓一些以前写的想法" class="headerlink" title="❓一些以前写的想法"></a>❓一些以前写的想法</h4><p>2018.10.25<br>梦会反映现实中捕捉不到的潜意识，负面的、希望的，然而使我略微欣慰的,是我在现实中隐隐意识到了，或许我在主动面对这样自己了。  </p><p>2018.11.06<br>突然就会很想感谢生命中的贵人，感谢他们在我人生中每一个微不足道的节骨眼助了力。  </p><p>2018.11.12<br>生日周的第一天变得很亢奋，一下不能理解原来的负面情绪都是从哪来的了。</p><p>2019.2.15<br>今天开始准备数据库系统工程师的考试，希望能坚持下去，要把大学的专业课重新看一遍，脑壳痛。脑子饱了，肚子瘪了。           </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;❓一些以前写的想法&quot;&gt;&lt;a href=&quot;#❓一些以前写的想法&quot; class=&quot;headerlink&quot; title=&quot;❓一些以前写的想法&quot;&gt;&lt;/a&gt;❓一些以前写的想法&lt;/h4&gt;&lt;p&gt;2018.10.25&lt;br&gt;梦会反映现实中捕捉不到的潜意识，负面的、希望的，然而使我
+      
+    
+    </summary>
+    
+    
+      <category term="零零碎碎" scheme="http://yoursite.com/tags/%E9%9B%B6%E9%9B%B6%E7%A2%8E%E7%A2%8E/"/>
+    
+  </entry>
+  
+</feed>
