@@ -1975,7 +1975,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b1baff;
+  background: #fb3ed6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2118,11 +2118,11 @@ img:hover {
   text-align: center;
 }
 .cc-license .cc-opacity {
-  opacity: 1;
+  opacity: 0;
   border-bottom: none;
 }
 .cc-license .cc-opacity:hover {
-  opacity: 1;
+  opacity: 0;
 }
 .cc-license img {
   display: inline-block;
