@@ -1974,7 +1974,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a7f1ff;
+  background: #fce905;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3071,10 +3071,10 @@ body {
   background-size: cover;
 }
 @font-face {
-  font-family: Hanzipen;
-  src: url("../../fonts/Hanzipen.ttc");
+  font-family: WawaSC-Regular;
+  src: url("../../fonts/WawaSC-Regular.otf");
 }
 .site-title {
   font-size: 20px !important;
-  font-family: 'Hanzipen' !important;
+  font-family: 'WawaSC-Regular' !important;
 }
