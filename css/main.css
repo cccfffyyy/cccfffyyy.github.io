@@ -1974,7 +1974,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7f772a;
+  background: #a7750a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3064,5 +3064,9 @@ hr {
   -moz-box-shadow: 0 0 5px argba(202, 203, 204, 0.5);
 }
 body {
-  background: url("../../images/back.jpg");
+  background: url("../../images/back.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
 }
