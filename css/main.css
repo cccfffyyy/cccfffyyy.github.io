@@ -1254,16 +1254,16 @@ pre .javascript .function {
 .use-motion .post-block,
 .use-motion .pagination,
 .use-motion .comments {
-  opacity: 0;
+  opacity: 0.5;
 }
 .use-motion .post-header {
-  opacity: 0;
+  opacity: 0.5;
 }
 .use-motion .post-body {
-  opacity: 0;
+  opacity: 0.5;
 }
 .use-motion .collection-title {
-  opacity: 0;
+  opacity: 0.5;
 }
 .post-body p a {
   color: #0593d3;
@@ -1974,7 +1974,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #692fb6;
+  background: #147cff;
 }
 .links-of-blogroll {
   font-size: 13px;
