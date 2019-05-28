@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="花花的碎片生活">
 <meta property="og:description" content="条件判断 练习&amp;gt;&amp;gt;&amp;gt;age = 3&amp;gt;&amp;gt;&amp;gt;if age &amp;gt;= 18:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;print(‘Adult’)&amp;gt;&amp;gt;&amp;gt;elif age&amp;gt;6:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;print(‘Teenager’)&amp;gt;&amp;gt;&amp;gt;else:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nb">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-28T09:02:26.014Z">
+<meta property="og:updated_time" content="2019-05-28T09:06:59.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习-Day2">
 <meta name="twitter:description" content="条件判断 练习&amp;gt;&amp;gt;&amp;gt;age = 3&amp;gt;&amp;gt;&amp;gt;if age &amp;gt;= 18:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;print(‘Adult’)&amp;gt;&amp;gt;&amp;gt;elif age&amp;gt;6:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;print(‘Teenager’)&amp;gt;&amp;gt;&amp;gt;else:&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;&amp;nb">
@@ -417,11 +417,11 @@
 <p>>&gt;&gt;n = 1<br>>&gt;&gt;while n &lt;=100:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;if n&gt;5:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break   #提前结束循环<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;n=n+1<br>>&gt;&gt;print(‘end’)<br>1<br>2<br>3<br>4<br>5<br>end</p>
 <p>>&gt;&gt;n = 0<br>>&gt;&gt;while n &lt; 10:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;n=n+1<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;if n%2 == 0:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue   #跳过这次循环，直接进行到下次<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>1<br>3<br>5<br>7<br>9</p>
 </blockquote>
-<p><strong>dict</strong><br>内置字典：dict，使用键-值（key-value）存储，具有极快的查找速度<br>和list相比，dict查找的插入速度极快，但是占用大量内存，内存浪费多 </p>
+<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>内置字典：dict，使用键-值（key-value）存储，具有极快的查找速度<br>和list相比，dict查找的插入速度极快，但是占用大量内存，内存浪费多 </p>
 <blockquote>
 <p>练习<br>>&gt;&gt;d={‘MARY’:90,<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;’JOHN’:80,<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;’ALICE’:95}<br>>&gt;&gt;print(d)<br>>&gt;&gt;d[‘MARY’]=80<br>>&gt;&gt;print(d[‘MARY’])<br>>&gt;&gt;d.pop(‘ALICE’)<br>>&gt;&gt;print(d)<br>>&gt;&gt;print(d.get(‘ALICE’,-1))<br>{‘MARY’: 90, ‘JOHN’: 80, ‘ALICE’: 95}<br>80<br>{‘MARY’: 80, ‘JOHN’: 80}<br>-1  </p>
 </blockquote>
-<p><strong>set</strong><br>set也是一组key的集合，但是不存储value，set中无重复的key。创建一个set，需要提供一个list作为输入集合。  </p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set也是一组key的集合，但是不存储value，set中无重复的key。创建一个set，需要提供一个list作为输入集合。  </p>
 <blockquote>
 <p>练习<br>>&gt;&gt;s1=set([1,2,3])<br>>&gt;&gt;print(s)<br>>&gt;&gt;s1.add(4)<br>>&gt;&gt;print(s)<br>>&gt;&gt;s1.remove(4)<br>>&gt;&gt;print(s)<br>>&gt;&gt;s2=set([3,4,5]<br>>&gt;&gt;print(s1&amp;s2)<br>>&gt;&gt;print(s1|s2)<br>{1, 2, 3}<br>{1, 2, 3}<br>{1, 2, 3}<br>{3}<br>{1, 2, 3, 4, 5}</p>
 </blockquote>
@@ -634,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断"><span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-text">循环</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断"><span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-text">循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict"><span class="nav-text">dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-text">set</span></a></li></ol></div>
             
 
           </div>
