@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cphoenix.cn/"/>
-  <updated>2019-05-28T05:42:55.382Z</updated>
+  <updated>2019-05-28T09:02:26.014Z</updated>
   <id>http://www.cphoenix.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python学习-Day2</title>
+    <link href="http://www.cphoenix.cn/2019/05/28/python-2019.05.28/"/>
+    <id>http://www.cphoenix.cn/2019/05/28/python-2019.05.28/</id>
+    <published>2019-05-28T05:59:14.000Z</published>
+    <updated>2019-05-28T09:02:26.014Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><blockquote><p>练习<br>>&gt;&gt;age = 3<br>>&gt;&gt;if age &gt;= 18:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Adult’)<br>>&gt;&gt;elif age&gt;6:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Teenager’)<br>>&gt;&gt;else:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Kid’)<br>Kid</p><p>>&gt;&gt;s = input(‘birth is : ‘)<br>>&gt;&gt;birth = int(s) &nbsp;&nbsp;#输入为字符串，需要转换格式<br>>&gt;&gt;if birth &lt; 2000:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘00前’)<br>>&gt;&gt;else:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘00后’)<br>birth is : 1995<br>00前</p><p>>&gt;&gt;print(‘格式 身高：1.75m 体重：80.5kg’)<br>>&gt;&gt;a = input(‘Your height : ‘)<br>>&gt;&gt;b = input(‘Your weight : ‘)<br>>&gt;&gt;height = float(a)<br>>&gt;&gt;weight = float(b)<br>>&gt;&gt;bmi=weight/(height*height)<br>>&gt;&gt;if bmi&gt;32:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Your BMI is : ‘,bmi,’严重肥胖’)<br>>&gt;&gt;elif bmi&gt;28:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Your BMI is : ‘,bmi,’肥胖’)<br>>&gt;&gt;elif bmi&gt;25:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Your BMI is : ‘,bmi,’过重’)<br>>&gt;&gt;elif bmi&gt;18.5:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Your BMI is : ‘,bmi,’正常’)<br>>&gt;&gt;else:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(‘Your BMI is : ‘,bmi,’过轻’)<br>格式 身高：1.75m 体重：80.5kg<br>Your height : 1.75<br>Your weight : 68<br>Your BMI is :  22.20408163265306 正常</p></blockquote><h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><strong>for…in</strong>  </p><blockquote><p>练习<br>>&gt;&gt;names=[‘A’,’B’,’C’,’D’]<br>>&gt;&gt;for name in names:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(name)<br>A<br>B<br>C<br>D</p><p>>&gt;&gt;sum=0<br>>&gt;&gt;for x in range(101):  #整数序列函数<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;sum=sum+x<br>>&gt;&gt;print(sum)<br>5050</p><p>>&gt;&gt;L = [‘Bart’, ‘Lisa’, ‘Adam’]<br>>&gt;&gt;for x in L:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>Bart<br>Lisa<br>Adam</p><p>>&gt;&gt;n = 1<br>>&gt;&gt;while n &lt;=100:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;if n&gt;5:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break   #提前结束循环<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;n=n+1<br>>&gt;&gt;print(‘end’)<br>1<br>2<br>3<br>4<br>5<br>end</p><p>>&gt;&gt;n = 0<br>>&gt;&gt;while n &lt; 10:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;n=n+1<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;if n%2 == 0:<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue   #跳过这次循环，直接进行到下次<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>1<br>3<br>5<br>7<br>9</p></blockquote><p><strong>dict</strong><br>内置字典：dict，使用键-值（key-value）存储，具有极快的查找速度<br>和list相比，dict查找的插入速度极快，但是占用大量内存，内存浪费多 </p><blockquote><p>练习<br>>&gt;&gt;d={‘MARY’:90,<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;’JOHN’:80,<br>>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;’ALICE’:95}<br>>&gt;&gt;print(d)<br>>&gt;&gt;d[‘MARY’]=80<br>>&gt;&gt;print(d[‘MARY’])<br>>&gt;&gt;d.pop(‘ALICE’)<br>>&gt;&gt;print(d)<br>>&gt;&gt;print(d.get(‘ALICE’,-1))<br>{‘MARY’: 90, ‘JOHN’: 80, ‘ALICE’: 95}<br>80<br>{‘MARY’: 80, ‘JOHN’: 80}<br>-1  </p></blockquote><p><strong>set</strong><br>set也是一组key的集合，但是不存储value，set中无重复的key。创建一个set，需要提供一个list作为输入集合。  </p><blockquote><p>练习<br>>&gt;&gt;s1=set([1,2,3])<br>>&gt;&gt;print(s)<br>>&gt;&gt;s1.add(4)<br>>&gt;&gt;print(s)<br>>&gt;&gt;s1.remove(4)<br>>&gt;&gt;print(s)<br>>&gt;&gt;s2=set([3,4,5]<br>>&gt;&gt;print(s1&amp;s2)<br>>&gt;&gt;print(s1|s2)<br>{1, 2, 3}<br>{1, 2, 3}<br>{1, 2, 3}<br>{3}<br>{1, 2, 3, 4, 5}</p></blockquote><p><strong>小结：</strong><br><strong>条件判断格式</strong> <font color="58c689"><strong>if:</strong></font><br><strong>…</strong></p><p><font color="58c689"><strong>elif:</strong></font><br><strong>…</strong></p><p><font color="58c689"><strong>else:</strong></font><br><strong>循环</strong> <strong>第一种</strong> <font color="58c689"><strong>while:</strong></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>第二种</strong> <font color="58c689"><strong>for…in:</strong></font><br><strong>循环控制：break，continue</strong></p><p><strong>元素可变：list，dict，set</strong><br><strong>元素不可变：tuple</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;条件判断&quot;&gt;&lt;a href=&quot;#条件判断&quot; class=&quot;headerlink&quot; title=&quot;条件判断&quot;&gt;&lt;/a&gt;条件判断&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;练习&lt;br&gt;&gt;&amp;gt;&amp;gt;age = 3&lt;br&gt;&gt;&amp;gt;&amp;gt;if age &amp;gt;= 1
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.cphoenix.cn/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python学习-Day1</title>
