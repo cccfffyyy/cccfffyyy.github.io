@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cphoenix.cn/"/>
-  <updated>2019-05-24T09:25:14.282Z</updated>
+  <updated>2019-05-28T05:42:55.382Z</updated>
   <id>http://www.cphoenix.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python学习-Day1</title>
+    <link href="http://www.cphoenix.cn/2019/05/27/python-2019.05.27/"/>
+    <id>http://www.cphoenix.cn/2019/05/27/python-2019.05.27/</id>
+    <published>2019-05-27T02:19:12.000Z</published>
+    <updated>2019-05-28T05:42:55.382Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="首先进行环境安装（Mac）"><a href="#首先进行环境安装（Mac）" class="headerlink" title="首先进行环境安装（Mac）"></a><font color="b35549">首先进行环境安装（Mac）</font></h4><p>1.python安装</p><blockquote><p>brew install python<br>python -V  &nbsp; //版本查看</p></blockquote><p>2.jupyter安装</p><blockquote><p>pip3 install jupyter<br>jupyter notebook &nbsp;  //启动服务  </p></blockquote><h4 id="环境配置好后，小白开始学习python啦～"><a href="#环境配置好后，小白开始学习python啦～" class="headerlink" title="环境配置好后，小白开始学习python啦～"></a><font color="b35549">环境配置好后，小白开始学习python啦～</font></h4><p>[python学习资料链接]（<a href="https://www.liaoxuefeng.com/wiki/1016959663602400）" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/1016959663602400）</a>  </p><h4 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a><font color="b35549">python基础</font></h4><p>注释用#标记，转义字符用\标记<br>等号=是赋值语句，可以把任意数据类型赋值给变量，同一变量可以被反复赋值，且可以是不同类型的变量。动态语言。  </p><p>格式化字符串：<font color="4c8cd2">%</font>  </p><p><font color="4c8cd2">%s</font> 表示用字符串替换；</p><p><font color="4c8cd2">%d</font> 表示用整数替换</p><p><font color="4c8cd2">%f</font> 表示用浮点数替换</p><blockquote><p>练习<br>>&gt; print(‘hello,%s~ %d day fighting!’%(‘cuify’,1))<br>hello,cuify~ 1 day fighting!  </p></blockquote><p><strong>list</strong><br>有序列表，可以随时添加和删除其中的元素</p><blockquote><p>练习<br>>&gt;&gt;classmates=[‘TOM’,’JACK’,’MARY’]<br>>&gt;&gt;classmates.append(‘ALICE’) #添加元素<br>>&gt;&gt;classmates.insert(1,’JOHN’)  #插入元素<br>>&gt;&gt;print(classmates)<br>>&gt;&gt;classmates.pop(1) &nbsp;#pop(i) i是索引位置，没写的话会删除最后一个元素<br>>&gt;&gt;print(classmates)<br>>&gt;&gt;classmates[1]=’IVY’<br>>&gt;&gt;print(classmates)<br>[‘TOM’, ‘JOHN’, ‘JACK’, ‘MARY’, ‘ALICE’]<br>[‘TOM’, ‘JACK’, ‘MARY’, ‘ALICE’]<br>[‘TOM’, ‘IVY’, ‘MARY’, ‘ALICE’]</p><p>>&gt;&gt;s=[‘apple’,’banana’,’peach’]<br>>&gt;&gt;p=[‘watermelon’,s,’grape’]<br>>&gt;&gt;print(p)<br>[‘watermelon’, [‘apple’, ‘banana’, ‘peach’], ‘grape’]</p></blockquote><p><strong>tuple</strong><br>有序列表，一旦初始化就不能修改。tuple的元素不变指的是tuple的每个元素，指向永不变。</p><blockquote><p>练习<br>>&gt;&gt;classmates=(‘TOM’,’JACK’,’MARY’)<br>>&gt;&gt;print(classmates)<br>(‘TOM’, ‘JACK’, ‘MARY’)</p><p>>&gt;&gt;s=(‘a’,’b’,[‘X’,’Y’],’c’)<br>>&gt;&gt;print(s)<br>>&gt;&gt;s[2][0]= ‘D’  #tuple里面嵌套list，可以更改list中的元素。<br>>&gt;&gt;print(s)<br>(‘a’, ‘b’, [‘X’, ‘Y’], ‘c’)<br>(‘a’, ‘b’, [‘D’, ‘Y’], ‘c’)  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;首先进行环境安装（Mac）&quot;&gt;&lt;a href=&quot;#首先进行环境安装（Mac）&quot; class=&quot;headerlink&quot; title=&quot;首先进行环境安装（Mac）&quot;&gt;&lt;/a&gt;&lt;font color=&quot;b35549&quot;&gt;首先进行环境安装（Mac）&lt;/font&gt;&lt;/h4&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.cphoenix.cn/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库系统工程师软考知识点整理</title>
