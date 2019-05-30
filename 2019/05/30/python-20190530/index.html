@@ -91,18 +91,18 @@
 
 
 
-<meta name="description" content="条件判断12345678#条件判断age = 3if age &amp;gt;= 18:    print(&apos;Adult&apos;)elif age&amp;gt;6:    print(&apos;Teenager&apos;)else:    print(&apos;Kid&apos;) Kid 123456s = input(&apos;birth is : &apos;)birth = int(s)if birth &amp;lt; 2000:    print(&apos;00前&apos;)el">
+<meta name="description" content="高级特性代码越少越好！越简单越好！   切片（Slice）根据索引取list或tuple的部分元素list、tuple、字符串都可以使用切片 12345678910#切片L = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;,&apos;E&apos;]print(L[0:3])   #从索引0开始，到索引3但不包括索引3M = list(range(20))print(M)print(M[-4:-1])  #倒数第一个元素的索引">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python学习-Day2">
-<meta property="og:url" content="http://www.cphoenix.cn/2019/05/28/python-20190528/index.html">
+<meta property="og:title" content="python学习-Day4">
+<meta property="og:url" content="http://www.cphoenix.cn/2019/05/30/python-20190530/index.html">
 <meta property="og:site_name" content="花花的碎片生活">
-<meta property="og:description" content="条件判断12345678#条件判断age = 3if age &amp;gt;= 18:    print(&apos;Adult&apos;)elif age&amp;gt;6:    print(&apos;Teenager&apos;)else:    print(&apos;Kid&apos;) Kid 123456s = input(&apos;birth is : &apos;)birth = int(s)if birth &amp;lt; 2000:    print(&apos;00前&apos;)el">
+<meta property="og:description" content="高级特性代码越少越好！越简单越好！   切片（Slice）根据索引取list或tuple的部分元素list、tuple、字符串都可以使用切片 12345678910#切片L = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;,&apos;E&apos;]print(L[0:3])   #从索引0开始，到索引3但不包括索引3M = list(range(20))print(M)print(M[-4:-1])  #倒数第一个元素的索引">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-29T01:18:55.020Z">
+<meta property="og:updated_time" content="2019-05-30T08:36:54.949Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python学习-Day2">
-<meta name="twitter:description" content="条件判断12345678#条件判断age = 3if age &amp;gt;= 18:    print(&apos;Adult&apos;)elif age&amp;gt;6:    print(&apos;Teenager&apos;)else:    print(&apos;Kid&apos;) Kid 123456s = input(&apos;birth is : &apos;)birth = int(s)if birth &amp;lt; 2000:    print(&apos;00前&apos;)el">
+<meta name="twitter:title" content="python学习-Day4">
+<meta name="twitter:description" content="高级特性代码越少越好！越简单越好！   切片（Slice）根据索引取list或tuple的部分元素list、tuple、字符串都可以使用切片 12345678910#切片L = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;,&apos;E&apos;]print(L[0:3])   #从索引0开始，到索引3但不包括索引3M = list(range(20))print(M)print(M[-4:-1])  #倒数第一个元素的索引">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cphoenix.cn/2019/05/28/python-20190528/">
+  <link rel="canonical" href="http://www.cphoenix.cn/2019/05/30/python-20190530/">
 
 
 
 
 
-  <title>python学习-Day2 | 花花的碎片生活</title>
+  <title>python学习-Day4 | 花花的碎片生活</title>
   
 
 
@@ -306,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.cphoenix.cn/2019/05/28/python-20190528/">
+    <link itemprop="mainEntityOfPage" href="http://www.cphoenix.cn/2019/05/30/python-20190530/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuify">
@@ -323,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python学习-Day2</h1>
+          <h1 class="post-title" itemprop="name headline">python学习-Day4</h1>
         
 
         <div class="post-meta">
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T13:59:14+08:00">
-                2019-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T09:15:30+08:00">
+                2019-05-30
               </time>
             
 
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  572
+                  538
                 </span>
               
 
@@ -404,59 +404,27 @@
       
 
       
-        <h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#条件判断</span></span><br><span class="line">age = <span class="number">3</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    print(<span class="string">'Adult'</span>)</span><br><span class="line"><span class="keyword">elif</span> age&gt;<span class="number">6</span>:</span><br><span class="line">    print(<span class="string">'Teenager'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'Kid'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Kid
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s = input(<span class="string">'birth is : '</span>)</span><br><span class="line">birth = int(s)</span><br><span class="line"><span class="keyword">if</span> birth &lt; <span class="number">2000</span>:</span><br><span class="line">    print(<span class="string">'00前'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'00后'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>birth is : 1995
-00前
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'格式 身高：1.75m 体重：80.5kg'</span>)</span><br><span class="line">a = input(<span class="string">'Your height : '</span>)</span><br><span class="line">b = input(<span class="string">'Your weight : '</span>)</span><br><span class="line">height = float(a)</span><br><span class="line">weight = float(b)</span><br><span class="line">bmi=weight/(height*height)</span><br><span class="line"><span class="keyword">if</span> bmi&gt;<span class="number">32</span>:</span><br><span class="line">    print(<span class="string">'Your BMI is : '</span>,bmi,<span class="string">'严重肥胖'</span>)</span><br><span class="line"><span class="keyword">elif</span> bmi&gt;<span class="number">28</span>:</span><br><span class="line">    print(<span class="string">'Your BMI is : '</span>,bmi,<span class="string">'肥胖'</span>)</span><br><span class="line"><span class="keyword">elif</span> bmi&gt;<span class="number">25</span>:</span><br><span class="line">    print(<span class="string">'Your BMI is : '</span>,bmi,<span class="string">'过重'</span>)</span><br><span class="line"><span class="keyword">elif</span> bmi&gt;<span class="number">18.5</span>:</span><br><span class="line">    print(<span class="string">'Your BMI is : '</span>,bmi,<span class="string">'正常'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'Your BMI is : '</span>,bmi,<span class="string">'过轻'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>格式 身高：1.75m 体重：80.5kg
-Your height : 1.75
-Your weight : 68
-Your BMI is :  22.20408163265306 正常
-</code></pre><h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><strong>for…in</strong>  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names=[<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
-<pre><code>A
-B
-C
-D
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">101</span>):  <span class="comment">#整数序列函数</span></span><br><span class="line">    sum=sum+x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
-<pre><code>5050
-</code></pre><p><strong>while</strong>  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#while</span></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line">n = <span class="number">99</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">    sum = sum + n</span><br><span class="line">    n = n - <span class="number">2</span></span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
-<pre><code>2500
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="string">'Bart'</span>, <span class="string">'Lisa'</span>, <span class="string">'Adam'</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> L:</span><br><span class="line">   print(x)</span><br></pre></td></tr></table></figure>
-<pre><code>Bart
-Lisa
-Adam
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> n &lt;=<span class="number">100</span>:</span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">5</span>:</span><br><span class="line">        <span class="keyword">break</span>   <span class="comment">#提前结束循环</span></span><br><span class="line">    print(n)</span><br><span class="line">    n=n+<span class="number">1</span></span><br><span class="line">print(<span class="string">'end'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>1
-2
-3
-4
-5
-end
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> n &lt; <span class="number">10</span>:</span><br><span class="line">    n=n+<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> n%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">continue</span>   <span class="comment">#跳过这次循环，直接进行到下次</span></span><br><span class="line">    print(n)</span><br></pre></td></tr></table></figure>
-<pre><code>1
-3
-5
-7
-9
-</code></pre><h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>内置字典：dict，使用键-值（key-value）存储，具有极快的查找速度<br>和list相比，dict查找的插入速度极快，但是占用大量内存，内存浪费多<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dict</span></span><br><span class="line">d=&#123;<span class="string">'MARY'</span>:<span class="number">90</span>,</span><br><span class="line">     <span class="string">'JOHN'</span>:<span class="number">80</span>,</span><br><span class="line">     <span class="string">'ALICE'</span>:<span class="number">95</span>&#125;</span><br><span class="line">print(d)</span><br><span class="line">d[<span class="string">'MARY'</span>]=<span class="number">80</span></span><br><span class="line">print(d[<span class="string">'MARY'</span>])</span><br><span class="line">d.pop(<span class="string">'ALICE'</span>)</span><br><span class="line">print(d)</span><br><span class="line">print(d.get(<span class="string">'ALICE'</span>,<span class="number">-1</span>))</span><br></pre></td></tr></table></figure></p>
-<pre><code>{&#39;MARY&#39;: 90, &#39;JOHN&#39;: 80, &#39;ALICE&#39;: 95}
-80
-{&#39;MARY&#39;: 80, &#39;JOHN&#39;: 80}
--1
-</code></pre><h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set也是一组key的集合，但是不存储value，set中无重复的key。创建一个set，需要提供一个list作为输入集合。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#set</span></span><br><span class="line">s1=set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">print(s)</span><br><span class="line">s1.add(<span class="number">4</span>)</span><br><span class="line">print(s)</span><br><span class="line">s1.remove(<span class="number">4</span>)</span><br><span class="line">print(s)</span><br><span class="line">s2=set([<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">print(s1&amp;s2)</span><br><span class="line">print(s1|s2)</span><br></pre></td></tr></table></figure>
-<pre><code>{1, 2, 3}
-{1, 2, 3}
-{1, 2, 3}
-{3}
-{1, 2, 3, 4, 5}
-</code></pre><p><strong>小结：</strong><br><strong>条件判断格式</strong> <font color="58c689">if:</font>…<font color="58c689">elif:</font>…<font color="58c689">else:</font><br><strong>循环</strong> <strong>第一种</strong> <font color="58c689">while:</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>第二种</strong> <font color="58c689">for…in:</font><br><strong>循环控制：break，continue</strong></p>
-<p><strong>元素可变：list，dict，set</strong><br><strong>元素不可变：tuple</strong></p>
-
+        <h3 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h3><p><font color="e32636">代码越少越好！越简单越好！</font>  </p>
+<h4 id="切片（Slice）"><a href="#切片（Slice）" class="headerlink" title="切片（Slice）"></a>切片（Slice）</h4><p>根据索引取list或tuple的部分元素<br>list、tuple、字符串都可以使用切片</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切片</span></span><br><span class="line">L = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'E'</span>]</span><br><span class="line">print(L[<span class="number">0</span>:<span class="number">3</span>])   <span class="comment">#从索引0开始，到索引3但不包括索引3</span></span><br><span class="line">M = list(range(<span class="number">20</span>))</span><br><span class="line">print(M)</span><br><span class="line">print(M[<span class="number">-4</span>:<span class="number">-1</span>])  <span class="comment">#倒数第一个元素的索引是-1</span></span><br><span class="line">print(M[:<span class="number">10</span>:<span class="number">2</span>])  <span class="comment">#前10个数，每两个取一个</span></span><br><span class="line">print(M[::<span class="number">5</span>])   <span class="comment">#所有数，每五个取一个</span></span><br><span class="line">print(len(M))</span><br><span class="line">print(M[len(M)<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[16, 17, 18]
+[0, 2, 4, 6, 8]
+[0, 5, 10, 15]
+20
+19
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实现一个trim()函数，去除字符串首尾的空格</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trim</span><span class="params">(string)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string[<span class="number">0</span>] == <span class="string">' '</span> <span class="keyword">and</span> string[len(string)<span class="number">-1</span>] == <span class="string">' '</span>:</span><br><span class="line">        <span class="keyword">return</span> string[<span class="number">1</span>:len(string)<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">elif</span> string[<span class="number">0</span>] == <span class="string">' '</span>:</span><br><span class="line">        <span class="keyword">return</span> string[<span class="number">1</span>:]</span><br><span class="line">    <span class="keyword">elif</span> string[len(string)<span class="number">-1</span>] == <span class="string">' '</span>:</span><br><span class="line">        <span class="keyword">return</span> string[<span class="number">0</span>:len(string)<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> string</span><br><span class="line">print(trim(<span class="string">' ABCD '</span>))</span><br><span class="line">print(trim(<span class="string">' ABCD'</span>))</span><br><span class="line">print(trim(<span class="string">'ABCD '</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉所有空格</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trim2</span><span class="params">(string)</span>:</span></span><br><span class="line">    length = len(string)</span><br><span class="line">    start = <span class="number">-1</span></span><br><span class="line">    end = length - <span class="number">1</span></span><br><span class="line">    return_str = []</span><br><span class="line">    <span class="keyword">while</span> start &lt; end:</span><br><span class="line">        start += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> string[start] == <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            return_str.append(string[start]) <span class="comment">#序列转化字符串</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join(return_str)</span><br><span class="line">print(<span class="string">'原字符串:"'</span>,<span class="string">'          A B  C DE   '</span>,<span class="string">'"'</span>) </span><br><span class="line">print(<span class="string">'去掉所有空格: "'</span>,trim2(<span class="string">'          A B  C DE   '</span>),<span class="string">'"'</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment">#去除字符串前后任意多空格</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trim3</span><span class="params">(string)</span>:</span></span><br><span class="line">    length = len(string)</span><br><span class="line">    start = <span class="number">0</span></span><br><span class="line">    end = length - <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</span><br><span class="line">        <span class="keyword">if</span> string[start] == <span class="string">' '</span>:</span><br><span class="line">            start += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> string[end] == <span class="string">' '</span>:</span><br><span class="line">            end -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> start &gt; end:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> string[start:end+<span class="number">1</span>]</span><br><span class="line">print(<span class="string">'去除字符串前后任意多空格:"'</span>,trim3(<span class="string">'          A B  C DE   '</span>),<span class="string">'"'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>ABCD
+ABCD
+ABCD
+原字符串:&quot;           A B  C DE    &quot;
+去掉所有空格: &quot; ABCDE &quot;
+去除字符串前后任意多空格:&quot; A B  C DE &quot;
+</code></pre><h4 id="迭代（Iteration）"><a href="#迭代（Iteration）" class="headerlink" title="迭代（Iteration）"></a>迭代（Iteration）</h4><p>给定一个list或者tuple，通过for循环来遍历这个list或tuple，叫做迭代</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用迭代查找一个list中最小和最大值，并返回一个tuple</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findMinAndMax</span><span class="params">(L)</span>:</span></span><br><span class="line">    max=min=<span class="keyword">None</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> L:</span><br><span class="line">       <span class="keyword">if</span> min==<span class="keyword">None</span> <span class="keyword">or</span> min&gt;n:</span><br><span class="line">          min=n</span><br><span class="line">       <span class="keyword">if</span> max==<span class="keyword">None</span> <span class="keyword">or</span> max&lt;n:</span><br><span class="line">          max=n</span><br><span class="line">    <span class="keyword">return</span> (min,max)</span><br><span class="line">print(findMinAndMax([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>(1, 6)
+</code></pre>
       
     </div>
     
@@ -480,12 +448,12 @@ end
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/05/28/python-20190528/">python学习-Day2</a></p>
+  <p><span>本文标题:</span><a href="/2019/05/30/python-20190530/">python学习-Day4</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 cuify 的个人博客">cuify</a></p>
-  <p><span>发布时间:</span>2019年05月28日 - 13:05</p>
-  <p><span>最后更新:</span>2019年05月29日 - 09:05</p>
-  <p><span>原始链接:</span><a href="/2019/05/28/python-20190528/" title="python学习-Day2">http://www.cphoenix.cn/2019/05/28/python-20190528/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/05/28/python-20190528/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年05月30日 - 09:05</p>
+  <p><span>最后更新:</span>2019年05月30日 - 16:05</p>
+  <p><span>原始链接:</span><a href="/2019/05/30/python-20190530/" title="python学习-Day4">http://www.cphoenix.cn/2019/05/30/python-20190530/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/05/30/python-20190530/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -528,8 +496,8 @@ end
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/27/python-20190527/" rel="next" title="python学习-Day1">
-                <i class="fa fa-chevron-left"></i> python学习-Day1
+              <a href="/2019/05/29/python-20190529/" rel="next" title="python学习-Day3">
+                <i class="fa fa-chevron-left"></i> python学习-Day3
               </a>
             
           </div>
@@ -537,10 +505,6 @@ end
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/29/python-20190529/" rel="prev" title="python学习-Day3">
-                python学习-Day3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -665,7 +629,7 @@ end
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断"><span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-text">循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict"><span class="nav-text">dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-text">set</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#高级特性"><span class="nav-text">高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#切片（Slice）"><span class="nav-text">切片（Slice）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代（Iteration）"><span class="nav-text">迭代（Iteration）</span></a></li></ol></li></ol></div>
             
 
           </div>
