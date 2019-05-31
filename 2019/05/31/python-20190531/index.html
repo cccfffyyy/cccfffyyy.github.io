@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="花花的碎片生活">
 <meta property="og:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-31T07:19:28.131Z">
+<meta property="og:updated_time" content="2019-05-31T08:51:00.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习-Day5">
 <meta name="twitter:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  920
+                  1,312
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  6
                 </span>
               
             </div>
@@ -454,9 +454,24 @@ step 3
 <h4 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h4><p>函数本身可以赋值给变量，变量可以指向函数。   </p>
 <font color="49c18a">一个函数可以接受另一个函数做参数，那么这个函数就叫高阶函数。</font>
 
-<h5 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h5><p>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回。</p>
-<p>reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算。</p>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#高阶函数</span></span><br><span class="line">f=abs</span><br><span class="line">f(<span class="number">-10</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> f(x)+f(y)</span><br><span class="line">print(add(<span class="number">-1</span>,<span class="number">-6</span>,abs))</span><br></pre></td></tr></table></figure>
+<pre><code>7
+</code></pre><h5 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h5><p>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#map</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x*x</span><br><span class="line">r=map(f,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">list(r)</span><br></pre></td></tr></table></figure>
+<pre><code>[1, 4, 9, 16, 25]
+</code></pre><p>reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#reduce</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line">reduce(add,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>15
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2int</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x,y)</span>:</span>   <span class="comment">#输出一个整数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">10</span>*x+y</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span>     <span class="comment">#数值与字符对应转换</span></span><br><span class="line">        digits=&#123;<span class="string">'0'</span>: <span class="number">0</span>, <span class="string">'1'</span>: <span class="number">1</span>, <span class="string">'2'</span>: <span class="number">2</span>, <span class="string">'3'</span>: <span class="number">3</span>, <span class="string">'4'</span>: <span class="number">4</span>, <span class="string">'5'</span>: <span class="number">5</span>, <span class="string">'6'</span>: <span class="number">6</span>, <span class="string">'7'</span>: <span class="number">7</span>, <span class="string">'8'</span>: <span class="number">8</span>, <span class="string">'9'</span>: <span class="number">9</span>&#125;</span><br><span class="line">        <span class="keyword">return</span> digits[s]</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,map(char2num,s))</span><br><span class="line">str2int(<span class="string">'1234'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>1234
+</code></pre><blockquote>
+<p>练习  </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(l)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> l[<span class="number">0</span>].upper()+l[<span class="number">1</span>:].lower()</span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#请编写一个prod()函数，可以接受一个list并利用reduce()求积</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(l)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mul</span><span class="params">(x,y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x*y</span><br><span class="line">    <span class="keyword">return</span> reduce(mul,l)</span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    s1,s2 = s.split(<span class="string">'.'</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x,y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">10</span>*x+y</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span></span><br><span class="line">        digits = &#123;<span class="string">'0'</span>: <span class="number">0</span>, <span class="string">'1'</span>: <span class="number">1</span>, <span class="string">'2'</span>: <span class="number">2</span>, <span class="string">'3'</span>: <span class="number">3</span>, <span class="string">'4'</span>: <span class="number">4</span>, <span class="string">'5'</span>: <span class="number">5</span>, <span class="string">'6'</span>: <span class="number">6</span>, <span class="string">'7'</span>: <span class="number">7</span>, <span class="string">'8'</span>: <span class="number">8</span>, <span class="string">'9'</span>: <span class="number">9</span>&#125;</span><br><span class="line">        <span class="keyword">return</span> digits[s]  </span><br><span class="line">    <span class="keyword">return</span> reduce(fn,map(char2num,s1))+reduce(fn,map(char2num,s2))/(<span class="number">10</span>*len(s2))</span><br><span class="line">print(str2float(<span class="string">'1234.45'</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>[&#39;Adam&#39;, &#39;Lisa&#39;, &#39;Bart&#39;]
+3 * 5 * 7 * 9 = 945
+1236.25
+</code></pre>
       
     </div>
     
@@ -483,7 +498,7 @@ step 3
   <p><span>本文标题:</span><a href="/2019/05/31/python-20190531/">python学习-Day5</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 cuify 的个人博客">cuify</a></p>
   <p><span>发布时间:</span>2019年05月31日 - 09:05</p>
-  <p><span>最后更新:</span>2019年05月31日 - 15:05</p>
+  <p><span>最后更新:</span>2019年05月31日 - 16:05</p>
   <p><span>原始链接:</span><a href="/2019/05/31/python-20190531/" title="python学习-Day5">http://www.cphoenix.cn/2019/05/31/python-20190531/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/05/31/python-20190531/" aria-label="复制成功！"></i></span>
   </p>
@@ -694,7 +709,7 @@ step 3
     
       <span class="post-meta-item-text">博文包含字数&#58;</span>
     
-    <span title="博文包含字数">5.2k</span>
+    <span title="博文包含字数">5.6k</span>
   
 </div>
 
