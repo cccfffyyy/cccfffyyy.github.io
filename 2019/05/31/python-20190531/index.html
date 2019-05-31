@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="花花的碎片生活">
 <meta property="og:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-31T06:33:53.002Z">
+<meta property="og:updated_time" content="2019-05-31T07:19:28.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习-Day5">
 <meta name="twitter:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  684
+                  920
                 </span>
               
 
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -443,8 +443,14 @@ step 3
 </code></pre><ol>
 <li>凡是可以作用于for循环的对象都是Iterable类型；  </li>
 <li>可作用于next()函数的对象都是Iterator类型  </li>
-<li>集合数据类型如list、dict、str等都是Iterable，不是Iterator，可以通过iter()函数获得一个Iterator对象</li>
+<li>集合数据类型如list、dict、str等都是Iterable，不是Iterator，可以通过iter()函数获得一个Iterator对象  </li>
 </ol>
+<h3 id="函数式编程（Functional-Programing）"><a href="#函数式编程（Functional-Programing）" class="headerlink" title="函数式编程（Functional Programing）"></a>函数式编程（Functional Programing）</h3><p><strong>特点</strong>：允许把函数本身作为一个参数传入另一个参数，还允许返回一个函数。抽象度高，贴近计算，执行效率低 。<br>Python对函数式编程提供部分支持。由于Python允许使用变量，因此，Python不是纯函数式编程语言。  </p>
+<h4 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h4><p>函数本身可以赋值给变量，变量可以指向函数。   </p>
+<font color="49c18a">一个函数可以接受另一个函数做参数，那么这个函数就叫高阶函数。</font>
+
+<h5 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h5><p>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回。</p>
+<p>reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算。</p>
 
       
     </div>
@@ -472,7 +478,7 @@ step 3
   <p><span>本文标题:</span><a href="/2019/05/31/python-20190531/">python学习-Day5</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 cuify 的个人博客">cuify</a></p>
   <p><span>发布时间:</span>2019年05月31日 - 09:05</p>
-  <p><span>最后更新:</span>2019年05月31日 - 14:05</p>
+  <p><span>最后更新:</span>2019年05月31日 - 15:05</p>
   <p><span>原始链接:</span><a href="/2019/05/31/python-20190531/" title="python学习-Day5">http://www.cphoenix.cn/2019/05/31/python-20190531/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/05/31/python-20190531/" aria-label="复制成功！"></i></span>
   </p>
@@ -650,7 +656,7 @@ step 3
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表声生成式（List-Comprehensions）"><span class="nav-text">列表声生成式（List Comprehensions）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器（generator）"><span class="nav-text">生成器（generator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器（Iterator）"><span class="nav-text">迭代器（Iterator）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表声生成式（List-Comprehensions）"><span class="nav-text">列表声生成式（List Comprehensions）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器（generator）"><span class="nav-text">生成器（generator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器（Iterator）"><span class="nav-text">迭代器（Iterator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数式编程（Functional-Programing）"><span class="nav-text">函数式编程（Functional Programing）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#高阶函数"><span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#map-reduce"><span class="nav-text">map/reduce</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -683,7 +689,7 @@ step 3
     
       <span class="post-meta-item-text">博文包含字数&#58;</span>
     
-    <span title="博文包含字数">4.9k</span>
+    <span title="博文包含字数">5.2k</span>
   
 </div>
 
