@@ -91,18 +91,18 @@
 
 
 
-<meta name="description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
+<meta name="description" content="列表生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;,">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python学习-Day5">
 <meta property="og:url" content="http://www.cphoenix.cn/2019/05/31/python-20190531/index.html">
 <meta property="og:site_name" content="花花的碎片生活">
-<meta property="og:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
+<meta property="og:description" content="列表生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-31T08:51:00.059Z">
+<meta property="og:updated_time" content="2019-05-31T08:53:52.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习-Day5">
-<meta name="twitter:description" content="列表声生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;">
+<meta name="twitter:description" content="列表生成式（List Comprehensions）列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。    123456print([x*x for x in range(1,11) if x%2 == 0])  #可以加if判断print([m+n for m in &apos;ABC&apos; for n in &apos;DEF&apos;])   #两层循环d = &amp;#123;&apos;a&apos;:&apos;A&apos;,">
 
 
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,312
+                  1,311
                 </span>
               
 
@@ -409,7 +409,7 @@
       
 
       
-        <h3 id="列表声生成式（List-Comprehensions）"><a href="#列表声生成式（List-Comprehensions）" class="headerlink" title="列表声生成式（List Comprehensions）"></a>列表声生成式（List Comprehensions）</h3><p>列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。   </p>
+        <h3 id="列表生成式（List-Comprehensions）"><a href="#列表生成式（List-Comprehensions）" class="headerlink" title="列表生成式（List Comprehensions）"></a>列表生成式（List Comprehensions）</h3><p>列表生成式时，把要生成的元素放到前面，后面跟for循环，就可以把list创建出来。   </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print([x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>) <span class="keyword">if</span> x%<span class="number">2</span> == <span class="number">0</span>])  <span class="comment">#可以加if判断</span></span><br><span class="line">print([m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'DEF'</span>])   <span class="comment">#两层循环</span></span><br><span class="line">d = &#123;<span class="string">'a'</span>:<span class="string">'A'</span>,<span class="string">'b'</span>:<span class="string">'B'</span>,<span class="string">'c'</span>:<span class="string">'C'</span>&#125;</span><br><span class="line">print([k+<span class="string">'='</span>+v <span class="keyword">for</span> k,v <span class="keyword">in</span> d.items()])  <span class="comment">#用两个变量生成list</span></span><br><span class="line">L=[<span class="string">'MARK'</span>,<span class="string">'SANDY'</span>,<span class="string">'SOPHIA'</span>]</span><br><span class="line">print([s.lower() <span class="keyword">for</span> s <span class="keyword">in</span> L])</span><br></pre></td></tr></table></figure>
 <pre><code>[4, 16, 36, 64, 100]
 [&#39;AD&#39;, &#39;AE&#39;, &#39;AF&#39;, &#39;BD&#39;, &#39;BE&#39;, &#39;BF&#39;, &#39;CD&#39;, &#39;CE&#39;, &#39;CF&#39;]
@@ -676,7 +676,7 @@ step 3
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表声生成式（List-Comprehensions）"><span class="nav-text">列表声生成式（List Comprehensions）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器（generator）"><span class="nav-text">生成器（generator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器（Iterator）"><span class="nav-text">迭代器（Iterator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数式编程（Functional-Programing）"><span class="nav-text">函数式编程（Functional Programing）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#高阶函数"><span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#map-reduce"><span class="nav-text">map/reduce</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表生成式（List-Comprehensions）"><span class="nav-text">列表生成式（List Comprehensions）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器（generator）"><span class="nav-text">生成器（generator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器（Iterator）"><span class="nav-text">迭代器（Iterator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数式编程（Functional-Programing）"><span class="nav-text">函数式编程（Functional Programing）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#高阶函数"><span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#map-reduce"><span class="nav-text">map/reduce</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
