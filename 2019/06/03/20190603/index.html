@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="碎片">
 <meta property="og:description" content="高阶函数过滤（filter）filter()函数用于过滤序列，依次作用于每个元素，根据返回值是True或False决定保留还是丢弃该元素。filter()函数返回的是一个Iterator，也就是一个惰性序列，所以要强迫filter()完成计算结果，需要用list()函数获得所有结果并返回list。 12345678910111213141516171819202122#用filter求素数def">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-03T08:02:20.729Z">
+<meta property="og:updated_time" content="2019-06-04T01:41:20.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习-Day6">
 <meta name="twitter:description" content="高阶函数过滤（filter）filter()函数用于过滤序列，依次作用于每个元素，根据返回值是True或False决定保留还是丢弃该元素。filter()函数返回的是一个Iterator，也就是一个惰性序列，所以要强迫filter()完成计算结果，需要用list()函数获得所有结果并返回list。 12345678910111213141516171819202122#用filter求素数def">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  965
+                  1,273
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -433,11 +433,15 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A=list(map(<span class="keyword">lambda</span> x : x * x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br><span class="line">L = list(filter(<span class="keyword">lambda</span> n : n % <span class="number">2</span> == <span class="number">1</span>, range(<span class="number">1</span>, <span class="number">20</span>)))</span><br><span class="line">print(A)</span><br><span class="line">print(L)</span><br></pre></td></tr></table></figure>
 <pre><code>[1, 4, 9, 16, 25]
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-</code></pre><h3 id="装饰器（Decorator）"><a href="#装饰器（Decorator）" class="headerlink" title="装饰器（Decorator）"></a>装饰器（Decorator）</h3><font color="704214">看不懂这块🙍</font>  
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#带参数的decorator</span></span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">        @functools.wraps(func)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">            print(<span class="string">'call %s():'</span> % func.__name__)</span><br><span class="line">            <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"><span class="meta">@log('excute')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'2019-06-03 14:25:10'</span>)</span><br><span class="line">now()</span><br></pre></td></tr></table></figure>
-<pre><code>call now():
-2019-06-03 14:25:10
+</code></pre><h3 id="装饰器（Decorator）"><a href="#装饰器（Decorator）" class="headerlink" title="装饰器（Decorator）"></a>装饰器（Decorator）</h3><p>没看懂学习资料里这块的内容🙍，网上查了下，写一点自己对装饰器的理解～装饰器就是可以给任意的函数加点东西，用新的功能包装一下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#简单版</span></span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(fn)</span>:</span>    <span class="comment">#被装饰的函数作为参数传入</span></span><br><span class="line">    print(<span class="string">'我是装饰！！！装饰的函数是：%s'</span>%fn.__name__)    <span class="comment">#作为装饰</span></span><br><span class="line">    <span class="keyword">return</span> fn</span><br><span class="line"></span><br><span class="line"><span class="meta">@decorator</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'这里需要装饰一下。。'</span>)</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+<pre><code>我是装饰！！！装饰的函数是：fn
+这里需要装饰一下。。
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#练习，请设计一个decorator，它可作用于任何函数上，并打印该函数的执行时间</span></span><br><span class="line"><span class="keyword">import</span> functools,datetime,time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(fn)</span>:</span>    </span><br><span class="line"><span class="meta">        @functools.wraps(fn)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span>    <span class="comment">#可以接受任意参数的调用,该函数作为装饰</span></span><br><span class="line">            print(<span class="string">'执行的函数：%s 执行的时间 ：%s %s'</span>%(fn.__name__,datetime.datetime.now().strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>),text))  </span><br><span class="line">            <span class="keyword">return</span> fn(*args,**kw)</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log('测试带参数1～')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fast</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">0.0012</span>)</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line"></span><br><span class="line"><span class="meta">@log('测试带参数2~')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">slow</span><span class="params">(x, y, z)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">0.1234</span>)</span><br><span class="line">    <span class="keyword">return</span> x * y * z;</span><br><span class="line">f = fast(<span class="number">11</span>, <span class="number">22</span>)</span><br><span class="line">print(f)</span><br><span class="line">s = slow(<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>)</span><br><span class="line">print(s)</span><br><span class="line"><span class="keyword">if</span> f != <span class="number">33</span>:</span><br><span class="line">    print(<span class="string">'测试失败!'</span>)</span><br><span class="line"><span class="keyword">elif</span> s != <span class="number">7986</span>:</span><br><span class="line">    print(<span class="string">'测试失败!'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>执行的函数：fast 执行的时间 ：2019-06-04 09:36:24 测试带参数1～
+33
+执行的函数：slow 执行的时间 ：2019-06-04 09:36:24 测试带参数2~
+7986
 </code></pre><h3 id="偏函数（partial）"><a href="#偏函数（partial）" class="headerlink" title="偏函数（partial）"></a>偏函数（partial）</h3><p>函数：functools.partial()<br>当函数的参数个数太多，需要简化时，使用functools.partial可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#偏函数</span></span><br><span class="line">int2=functools.partial(int,base=<span class="number">8</span>)   <span class="comment">#字符8进制转换</span></span><br><span class="line">print(int2(<span class="string">'12345'</span>))</span><br><span class="line">max2=functools.partial(max,<span class="number">10</span>)    <span class="comment">#会把10加入比较</span></span><br><span class="line">print(max2(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
 <pre><code>5349
@@ -469,7 +473,7 @@
   <p><span>本文标题:</span><a href="/2019/06/03/20190603/">python学习-Day6</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 cuify 的个人博客">cuify</a></p>
   <p><span>发布时间:</span>2019年06月03日 - 09:06</p>
-  <p><span>最后更新:</span>2019年06月03日 - 16:06</p>
+  <p><span>最后更新:</span>2019年06月04日 - 09:06</p>
   <p><span>原始链接:</span><a href="/2019/06/03/20190603/" title="python学习-Day6">http://www.cphoenix.cn/2019/06/03/20190603/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/06/03/20190603/" aria-label="复制成功！"></i></span>
   </p>
@@ -680,7 +684,7 @@
     
       <span class="post-meta-item-text">博文包含字数&#58;</span>
     
-    <span title="博文包含字数">6.5k</span>
+    <span title="博文包含字数">6.8k</span>
   
 </div>
 
