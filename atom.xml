@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cphoenix.cn/"/>
-  <updated>2019-06-05T09:27:00.104Z</updated>
+  <updated>2019-06-06T03:44:47.305Z</updated>
   <id>http://www.cphoenix.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python学习-Day9</title>
+    <link href="http://www.cphoenix.cn/2019/06/06/python-20190606/"/>
+    <id>http://www.cphoenix.cn/2019/06/06/python-20190606/</id>
+    <published>2019-06-06T02:39:39.000Z</published>
+    <updated>2019-06-06T03:44:47.305Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="面向对象高级编程"><a href="#面向对象高级编程" class="headerlink" title="面向对象高级编程"></a>面向对象高级编程</h3><h4 id="使用-slots"><a href="#使用-slots" class="headerlink" title="使用__slots__"></a>使用__slots__</h4><p>定义class的时候定义一个特殊的__slots__变量，来限制该class实例能添加的属性<br>__slots__定义的属性只对当前类实例起作用，对继承的子类是不起作用的。  </p><h4 id="使用-property"><a href="#使用-property" class="headerlink" title="使用@property"></a>使用@property</h4><p>既能检查参数，又可以用类似属性这样简单的方式来访问类的变量。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;面向对象高级编程&quot;&gt;&lt;a href=&quot;#面向对象高级编程&quot; class=&quot;headerlink&quot; title=&quot;面向对象高级编程&quot;&gt;&lt;/a&gt;面向对象高级编程&lt;/h3&gt;&lt;h4 id=&quot;使用-slots&quot;&gt;&lt;a href=&quot;#使用-slots&quot; class=&quot;head
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.cphoenix.cn/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python学习-Day8</title>
