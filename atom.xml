@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cphoenix.cn/"/>
-  <updated>2019-06-14T05:59:47.671Z</updated>
+  <updated>2019-06-20T08:48:31.856Z</updated>
   <id>http://www.cphoenix.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python学习-Day14</title>
+    <link href="http://www.cphoenix.cn/2019/06/20/python-20190620/"/>
+    <id>http://www.cphoenix.cn/2019/06/20/python-20190620/</id>
+    <published>2019-06-20T01:23:20.000Z</published>
+    <updated>2019-06-20T08:48:31.856Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，我们只需要使用threading这个高级模块。<br>启动一个线程就是把一个函数传入并创建Thread实例，然后调用start()开始执行。  </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time,threading</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loop</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'thread is running...%s...'</span>%threading.current_thread().name) <span class="comment">#返回当前线程的实例 current_thread()</span></span><br><span class="line">    n = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &lt; <span class="number">5</span>:</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line">        print(<span class="string">'thread %s&gt;&gt;&gt;%s'</span>%(threading.current_thread().name,n))</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">        print(<span class="string">'thread %s ended'</span>%threading.current_thread().name)</span><br><span class="line">        </span><br><span class="line">print(<span class="string">'thread is running...%s...'</span>%threading.current_thread().name)   <span class="comment">#主线程名字的实例MainThread</span></span><br><span class="line">t = threading.Thread(target = loop ,name = <span class="string">'LoopThread'</span>)   <span class="comment">#子线程名字在创建时指定</span></span><br><span class="line">t.start()</span><br><span class="line">t.join()</span><br><span class="line">print(<span class="string">'thread %s ended'</span>%threading.current_thread().name)</span><br></pre></td></tr></table></figure><pre><code>thread is running...MainThread...thread is running...LoopThread...thread LoopThread&gt;&gt;&gt;2thread LoopThread endedthread LoopThread&gt;&gt;&gt;3thread LoopThread endedthread LoopThread&gt;&gt;&gt;4thread LoopThread endedthread LoopThread&gt;&gt;&gt;5thread LoopThread endedthread MainThread ended</code></pre><p><strong>threading.Lock()</strong><br>由于锁只有一个，无论多少线程，同一时刻最多只有一个线程持有该锁，所以，不会造成修改的冲突。创建一个锁就是通过threading.Lock()来实现。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time,threading</span><br><span class="line"></span><br><span class="line">balance = <span class="number">0</span>   <span class="comment">#存款</span></span><br><span class="line">lock = threading.Lock() <span class="comment">#锁   加入锁是为了避免修改冲突</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_it</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> balance</span><br><span class="line">    balance = balance + n</span><br><span class="line">    balance = balance - n</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_thread</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">        lock.acquire()  <span class="comment">#先获取锁</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            change_it(n)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            lock.release()  <span class="comment">#改完了一定要释放锁</span></span><br><span class="line"></span><br><span class="line">t1 = threading.Thread(target = run_thread,args = (<span class="number">5</span>,))</span><br><span class="line">t2 = threading.Thread(target = run_thread,args = (<span class="number">8</span>,))</span><br><span class="line">t1.start()</span><br><span class="line">t2.start()</span><br><span class="line">t1.join()</span><br><span class="line">t2.join()</span><br><span class="line">print(balance)</span><br></pre></td></tr></table></figure><pre><code>0</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;多线程&quot;&gt;&lt;a href=&quot;#多线程&quot; class=&quot;headerlink&quot; title=&quot;多线程&quot;&gt;&lt;/a&gt;多线程&lt;/h3&gt;&lt;p&gt;Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.cphoenix.cn/tags/python/"/>
+    
+      <category term="多线程" scheme="http://www.cphoenix.cn/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="threading" scheme="http://www.cphoenix.cn/tags/threading/"/>
+    
+  </entry>
   
   <entry>
     <title>python学习-Day13</title>
