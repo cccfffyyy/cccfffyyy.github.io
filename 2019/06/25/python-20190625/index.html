@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="python,IO编程,文件读写,StringIO和BytesIO,json,序列化,操作文件和目录,">
+  <meta name="keywords" content="python,访问数据库,">
 
 
 
@@ -91,18 +91,18 @@
 
 
 
-<meta name="description" content="IO编程文件读写磁盘上读写文件的功能都是操作系统提供的，读写文件就是请求操作系统打开一个文件对象（文件描述符），然后通过操作系统提供的接口从这个文件对象中读取数据，或者把数据写入这个文件对象。   读文件要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符。文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限">
-<meta name="keywords" content="python,IO编程,文件读写,StringIO和BytesIO,json,序列化,操作文件和目录">
+<meta name="description" content="SQLitePython就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。   Python定义了一套操作数据库的API接口，任何数据库要连接到Python，只需要提供符合Python标准的数据库驱动即可。     使用Python的DB-API时，只要搞清楚Connection和Cursor对象，打开后一定记得关闭，就可以放心地使用。 使用Cursor">
+<meta name="keywords" content="python,访问数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python学习-Day12">
-<meta property="og:url" content="http://www.cphoenix.cn/2019/06/12/python-20190612/index.html">
+<meta property="og:title" content="python学习-Day15">
+<meta property="og:url" content="http://www.cphoenix.cn/2019/06/25/python-20190625/index.html">
 <meta property="og:site_name" content="碎片">
-<meta property="og:description" content="IO编程文件读写磁盘上读写文件的功能都是操作系统提供的，读写文件就是请求操作系统打开一个文件对象（文件描述符），然后通过操作系统提供的接口从这个文件对象中读取数据，或者把数据写入这个文件对象。   读文件要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符。文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限">
+<meta property="og:description" content="SQLitePython就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。   Python定义了一套操作数据库的API接口，任何数据库要连接到Python，只需要提供符合Python标准的数据库驱动即可。     使用Python的DB-API时，只要搞清楚Connection和Cursor对象，打开后一定记得关闭，就可以放心地使用。 使用Cursor">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-12T07:17:06.337Z">
+<meta property="og:updated_time" content="2019-06-25T06:51:23.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python学习-Day12">
-<meta name="twitter:description" content="IO编程文件读写磁盘上读写文件的功能都是操作系统提供的，读写文件就是请求操作系统打开一个文件对象（文件描述符），然后通过操作系统提供的接口从这个文件对象中读取数据，或者把数据写入这个文件对象。   读文件要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符。文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限">
+<meta name="twitter:title" content="python学习-Day15">
+<meta name="twitter:description" content="SQLitePython就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。   Python定义了一套操作数据库的API接口，任何数据库要连接到Python，只需要提供符合Python标准的数据库驱动即可。     使用Python的DB-API时，只要搞清楚Connection和Cursor对象，打开后一定记得关闭，就可以放心地使用。 使用Cursor">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cphoenix.cn/2019/06/12/python-20190612/">
+  <link rel="canonical" href="http://www.cphoenix.cn/2019/06/25/python-20190625/">
 
 
 
 
 
-  <title>python学习-Day12 | 碎片</title>
+  <title>python学习-Day15 | 碎片</title>
   
 
 
@@ -306,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.cphoenix.cn/2019/06/12/python-20190612/">
+    <link itemprop="mainEntityOfPage" href="http://www.cphoenix.cn/2019/06/25/python-20190625/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuify">
@@ -323,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python学习-Day12</h1>
+          <h1 class="post-title" itemprop="name headline">python学习-Day15</h1>
         
 
         <div class="post-meta">
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-12T09:35:02+08:00">
-                2019-06-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T09:28:20+08:00">
+                2019-06-25
               </time>
             
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,365
+                  555
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  3
                 </span>
               
             </div>
@@ -409,51 +409,19 @@
       
 
       
-        <h3 id="IO编程"><a href="#IO编程" class="headerlink" title="IO编程"></a>IO编程</h3><h4 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h4><p>磁盘上读写文件的功能都是操作系统提供的，读写文件就是请求操作系统打开一个文件对象<br>（文件描述符），然后通过操作系统提供的接口从这个文件对象中读取数据，或者把数据写入这个文件对象。  </p>
-<p><strong>读文件</strong><br>要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符。<br>文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读文件</span></span><br><span class="line"><span class="keyword">try</span>:       <span class="comment">#无论是否出错，都关闭文件</span></span><br><span class="line">    f = open(<span class="string">'./err.py'</span>,<span class="string">'r'</span>)   <span class="comment">#打开一个文件，r 代表读</span></span><br><span class="line">    print(f.read())     <span class="comment">#一次读取全部内容，读到内存，用str表示</span></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()   <span class="comment">#关闭文件</span></span><br></pre></td></tr></table></figure>
-<pre><code>#err.py
-import pdb
+        <h4 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h4><p>Python就内置了SQLite3，所以，在Python中使用SQLite，不需要安装任何东西，直接使用。  </p>
+<p>Python定义了一套操作数据库的API接口，任何数据库要连接到Python，只需要提供符合Python标准的数据库驱动即可。    </p>
+<p>使用Python的DB-API时，只要搞清楚Connection和Cursor对象，打开后一定记得关闭，就可以放心地使用。</p>
+<p>使用Cursor对象执行insert，update，delete语句时，执行结果由rowcount返回影响的行数，就可以拿到执行结果。</p>
+<p>使用Cursor对象执行select语句时，通过fetchall()可以拿到结果集。结果集是一个list，每个元素都是一个tuple，对应一行记录。   </p>
+<p>如果SQL语句带有参数，那么需要把参数按照位置传递给execute()方法，有几个?占位符就必须对应几个参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn = sqlite3.connect(<span class="string">'test1.db'</span>) <span class="comment">#如果没有该数据库文件，会在当前目录创建</span></span><br><span class="line">cursor = conn.cursor()</span><br><span class="line">cursor.execute(<span class="string">'create table user  (id varchar(20) primary key, name varchar(20))'</span>)</span><br><span class="line">cursor.execute(<span class="string">'insert into user (id, name) values (\'2\', \'Anine\')'</span>)</span><br><span class="line">cursor.close()</span><br><span class="line">conn.commit()  <span class="comment">#提交事务</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn = sqlite3.connect(<span class="string">'test1.db'</span>)</span><br><span class="line">cursor = conn.cursor()</span><br><span class="line">cursor.execute(<span class="string">'select * from user'</span>)</span><br><span class="line">values = cursor.fetchall()</span><br><span class="line">print(values)</span><br><span class="line">cursor.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+<pre><code>[(&#39;2&#39;, &#39;Anine&#39;)]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##练习  返回指定分数区间的名字，按分数从低到高排序</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os, sqlite3</span><br><span class="line"></span><br><span class="line">db_file = os.path.join(os.path.dirname(<span class="string">'__file__'</span>), <span class="string">'test.db'</span>)</span><br><span class="line"><span class="keyword">if</span> os.path.isfile(db_file):</span><br><span class="line">    os.remove(db_file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始数据:</span></span><br><span class="line">conn = sqlite3.connect(db_file)</span><br><span class="line">cursor = conn.cursor()</span><br><span class="line">cursor.execute(<span class="string">'create table user(id varchar(20) primary key, name varchar(20), score int)'</span>)</span><br><span class="line">cursor.execute(<span class="string">r"insert into user values ('A-001', 'Adam', 95)"</span>)</span><br><span class="line">cursor.execute(<span class="string">r"insert into user values ('A-002', 'Bart', 62)"</span>)</span><br><span class="line">cursor.execute(<span class="string">r"insert into user values ('A-003', 'Lisa', 78)"</span>)</span><br><span class="line">cursor.close()</span><br><span class="line">conn.commit()</span><br><span class="line">conn.close()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_score_in</span><span class="params">(low, high)</span>:</span></span><br><span class="line">    conn = sqlite3.connect(db_file)</span><br><span class="line">    cursor = conn.cursor()</span><br><span class="line">    cursor.execute(<span class="string">'select name from user where score &gt;= ? and score &lt;= ? order by score'</span>,(low,high))</span><br><span class="line">    values = cursor.fetchall()</span><br><span class="line">    cursor.close()</span><br><span class="line">    conn.close()</span><br><span class="line">    <span class="keyword">return</span> [x[<span class="number">0</span>] <span class="keyword">for</span> x <span class="keyword">in</span> values]</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 测试:</span></span><br><span class="line"><span class="keyword">assert</span> get_score_in(<span class="number">80</span>, <span class="number">95</span>) == [<span class="string">'Adam'</span>], get_score_in(<span class="number">80</span>, <span class="number">95</span>)</span><br><span class="line"><span class="keyword">assert</span> get_score_in(<span class="number">60</span>, <span class="number">80</span>) == [<span class="string">'Bart'</span>, <span class="string">'Lisa'</span>], get_score_in(<span class="number">60</span>, <span class="number">80</span>)</span><br><span class="line"><span class="keyword">assert</span> get_score_in(<span class="number">60</span>, <span class="number">100</span>) == [<span class="string">'Bart'</span>, <span class="string">'Lisa'</span>, <span class="string">'Adam'</span>], get_score_in(<span class="number">60</span>, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Pass'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Pass
+</code></pre><p>Mysql和SQLite差不多，就是import的包不同，占位符是%s。</p>
 
-s = &#39;0&#39;
-n = int(s)
-pdb.set_trace() #运行到这里会自动暂停
-print(10 / n)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#更加简洁的写法，和try...finally一样</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./err.py'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> f:   <span class="comment">#with语句可以自动调用close方法</span></span><br><span class="line">    print(f.read(<span class="number">4</span>))   <span class="comment">#read(size)  最多读取size个字节的内容</span></span><br><span class="line">    print(f.readline()) <span class="comment">#每次读取一行内容</span></span><br><span class="line">    print(f.readlines())  <span class="comment">#一次读取所有内容并按行返回list，读取配置文件比较合适</span></span><br></pre></td></tr></table></figure>
-<pre><code>#err
-.py
-
-[&#39;import pdb\n&#39;, &#39;\n&#39;, &quot;s = &#39;0&#39;\n&quot;, &#39;n = int(s)\n&#39;, &#39;pdb.set_trace() #运行到这里会自动暂停\n&#39;, &#39;print(10 / n)\n&#39;]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = open(<span class="string">'./gbk.txt'</span>,<span class="string">'rb'</span>)  <span class="comment">#rb 二进制</span></span><br><span class="line">    print(f.read())</span><br><span class="line">    f2 = open(<span class="string">'./gbk.txt'</span>,<span class="string">'r'</span>,encoding = <span class="string">'utf-8'</span>, errors = <span class="string">'ignore'</span>) <span class="comment">#encoding 编码；errors 忽略编码错误</span></span><br><span class="line">    print(f2.read())</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    f.close()</span><br><span class="line">    f2.close()</span><br></pre></td></tr></table></figure>
-<pre><code>b&#39;\xe6\xb5\x8b\xe8\xaf\x95\n&#39;
-测试
-</code></pre><p><strong>写文件</strong><br>写文件和读文件是一样的，唯一区别是调用open()函数时，传入标识符’w’或者’wb’表示写文本文件或写二进制文件。<br>以’w’模式写入文件时，如果文件已存在，会直接覆盖（相当于删掉后新写入一个文件）。如果我们希望追加到文件末尾怎么办？可以传入’a’以追加（append）模式写入。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#写文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./gbk.txt'</span>,<span class="string">'w'</span>) <span class="keyword">as</span> f:  <span class="comment">#w完全覆盖</span></span><br><span class="line">    f.write(<span class="string">'写一行文本进去～'</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./gbk.txt'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    print(f.read())</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./gbk.txt'</span>,<span class="string">'a'</span>) <span class="keyword">as</span> f:  <span class="comment">#追加 append</span></span><br><span class="line">    f.write(<span class="string">'追加文本～'</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./gbk.txt'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    print(f.read())</span><br></pre></td></tr></table></figure>
-<pre><code>写一行文本进去～
-写一行文本进去～追加文本～
-</code></pre><p><strong>StringIO</strong><br>StringIO顾名思义就是在内存中读写str。要把str写入StringIO，我们需要先创建一个StringIO，然后，像文件一样写入即可  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#StringIO   </span></span><br><span class="line"><span class="comment">##BytesIO 和StringIO一样，只是操作的是二进制数据，不是str，在这里就不写了</span></span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</span><br><span class="line">f = StringIO()</span><br><span class="line">f.write(<span class="string">'hey '</span>)</span><br><span class="line">f.write(<span class="string">'buddy~'</span>)</span><br><span class="line">print(f.getvalue())   <span class="comment">#getvalue获取写入后的str</span></span><br><span class="line"></span><br><span class="line">t = StringIO(<span class="string">'今天\n天气\n真不错'</span>)   <span class="comment">#初始化一个str</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    s = t.readline()</span><br><span class="line">    <span class="keyword">if</span> s == <span class="string">''</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(s.strip())  <span class="comment">#strip用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列</span></span><br></pre></td></tr></table></figure>
-<pre><code>hey buddy~
-今天
-天气
-真不错
-</code></pre><p><strong>BytesIO</strong><br>和StringIO一样，只是操作的是二进制数据   </p>
-<h4 id="操作文件和目录"><a href="#操作文件和目录" class="headerlink" title="操作文件和目录"></a>操作文件和目录</h4><p>Python的os模块封装了操作系统的目录和文件操作，要注意这些函数有的在os模块中，有的在os.path模块中。</p>
-<blockquote>
-<p>查看当前目录的绝对路径:<br>>&gt;&gt; os.path.abspath(‘.’)<br>‘/Users/michael’<br>在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:<br>>&gt;&gt; os.path.join(‘/Users/michael’, ‘testdir’)<br>‘/Users/michael/testdir’<br>然后创建一个目录:<br>>&gt;&gt; os.mkdir(‘/Users/michael/testdir’)<br>删掉一个目录:<br>>&gt;&gt; os.rmdir(‘/Users/michael/testdir’)<br>拆分路径<br>>&gt;&gt;os.path.split(‘/Users/michael/testdir/file.txt’)<br>(‘/Users/michael/testdir’, ‘file.txt’)<br>得到文件扩展名<br>>&gt;&gt; os.path.splitext(‘/path/to/file.txt’)<br>(‘/path/to/file’, ‘.txt’)<br>对文件重命名:<br>>&gt;&gt; os.rename(‘test.txt’, ‘test.py’)<br>删掉文件:<br>>&gt;&gt; os.remove(‘test.py’)  </p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#编写一个程序，能在当前目录以及当前目录的所有子目录下查找文件名包含指定字符串的文件，并打印出相对路径。</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printFileName</span><span class="params">(path, key_word)</span>:</span>   <span class="comment">#传入路径 和 关键字</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(os.path.join(path, x)): </span><br><span class="line">            printFileName(os.path.join(path, x), key_word)</span><br><span class="line">        <span class="keyword">elif</span> key_word <span class="keyword">in</span> os.path.splitext(x)[<span class="number">0</span>]:</span><br><span class="line">              print(os.path.join(path, x))</span><br><span class="line">printFileName(<span class="string">'.'</span>,<span class="string">'0604'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>./190604.ipynb
-./.ipynb_checkpoints/190604-checkpoint.ipynb
-</code></pre><h4 id="序列化-pickling-反序列化-unpickling"><a href="#序列化-pickling-反序列化-unpickling" class="headerlink" title="序列化(pickling) 反序列化(unpickling)"></a>序列化(pickling) 反序列化(unpickling)</h4><p>Python语言特定的序列化模块是pickle，但如果要把序列化搞得更通用、更符合Web标准，就可以使用json模块。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#序列化两种方式</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">d = dict(name = <span class="string">'Bob'</span>,age = <span class="number">20</span>, score = <span class="number">80</span>)</span><br><span class="line">f = open(<span class="string">'./dump.txt'</span>,<span class="string">'wb'</span>)</span><br><span class="line">pickle.dump(d,f)     <span class="comment">#序列化</span></span><br><span class="line">f.close()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./dump.txt'</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    d = pickle.load(f)   <span class="comment">#反序列化</span></span><br><span class="line">    print(d)</span><br></pre></td></tr></table></figure>
-<pre><code>{&#39;name&#39;: &#39;Bob&#39;, &#39;age&#39;: 20, &#39;score&#39;: 80}
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">d = dict(eat = <span class="string">'草莓'</span>,drink = <span class="string">'奶茶'</span>)</span><br><span class="line">b = pickle.dumps(d)  <span class="comment">#把任意对象序列化成一个bytes</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./dump.txt'</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(b)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./dump.txt'</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    d = f.read()</span><br><span class="line">    d = pickle.loads(d)    <span class="comment">#反序列化</span></span><br><span class="line">    print(d)</span><br></pre></td></tr></table></figure>
-<pre><code>{&#39;eat&#39;: &#39;草莓&#39;, &#39;drink&#39;: &#39;奶茶&#39;}
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python 内置 json</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">d = dict(name=<span class="string">'Bob'</span>, age=<span class="number">20</span>, score=<span class="number">88</span>)</span><br><span class="line">print(json.dumps(d))   <span class="comment">#python 转化为 json</span></span><br><span class="line">json_str = <span class="string">'&#123;"age": 20, "score": 88, "name": "Bob"&#125;'</span></span><br><span class="line">print(json.loads(json_str))  <span class="comment">#json 反序列化为 python对象</span></span><br></pre></td></tr></table></figure>
-<pre><code>{&quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 20, &quot;score&quot;: 88}
-{&#39;age&#39;: 20, &#39;score&#39;: 88, &#39;name&#39;: &#39;Bob&#39;}
-</code></pre>
       
     </div>
     
@@ -477,12 +445,12 @@ print(10 / n)
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/12/python-20190612/">python学习-Day12</a></p>
+  <p><span>本文标题:</span><a href="/2019/06/25/python-20190625/">python学习-Day15</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 cuify 的个人博客">cuify</a></p>
-  <p><span>发布时间:</span>2019年06月12日 - 09:06</p>
-  <p><span>最后更新:</span>2019年06月12日 - 15:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/12/python-20190612/" title="python学习-Day12">http://www.cphoenix.cn/2019/06/12/python-20190612/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/06/12/python-20190612/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年06月25日 - 09:06</p>
+  <p><span>最后更新:</span>2019年06月25日 - 14:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/25/python-20190625/" title="python学习-Day15">http://www.cphoenix.cn/2019/06/25/python-20190625/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.cphoenix.cn/2019/06/25/python-20190625/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -514,17 +482,7 @@ print(10 / n)
           
             <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           
-            <a href="/tags/IO编程/" rel="tag"><i class="fa fa-tag"></i> IO编程</a>
-          
-            <a href="/tags/文件读写/" rel="tag"><i class="fa fa-tag"></i> 文件读写</a>
-          
-            <a href="/tags/StringIO和BytesIO/" rel="tag"><i class="fa fa-tag"></i> StringIO和BytesIO</a>
-          
-            <a href="/tags/json/" rel="tag"><i class="fa fa-tag"></i> json</a>
-          
-            <a href="/tags/序列化/" rel="tag"><i class="fa fa-tag"></i> 序列化</a>
-          
-            <a href="/tags/操作文件和目录/" rel="tag"><i class="fa fa-tag"></i> 操作文件和目录</a>
+            <a href="/tags/访问数据库/" rel="tag"><i class="fa fa-tag"></i> 访问数据库</a>
           
         </div>
       
@@ -537,8 +495,8 @@ print(10 / n)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/11/python-20190611/" rel="next" title="python学习-Day11">
-                <i class="fa fa-chevron-left"></i> python学习-Day11
+              <a href="/2019/06/20/python-20190620/" rel="next" title="python学习-Day14">
+                <i class="fa fa-chevron-left"></i> python学习-Day14
               </a>
             
           </div>
@@ -546,10 +504,6 @@ print(10 / n)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/14/python-20190614/" rel="prev" title="python学习-Day13">
-                python学习-Day13 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -674,7 +628,7 @@ print(10 / n)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#IO编程"><span class="nav-text">IO编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件读写"><span class="nav-text">文件读写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作文件和目录"><span class="nav-text">操作文件和目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列化-pickling-反序列化-unpickling"><span class="nav-text">序列化(pickling) 反序列化(unpickling)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SQLite"><span class="nav-text">SQLite</span></a></li></ol></div>
             
 
           </div>
